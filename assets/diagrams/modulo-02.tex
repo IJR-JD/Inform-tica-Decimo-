@@ -1,0 +1,31 @@
+\documentclass[tikz,border=9mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric}
+\tikzset{
+  >={Latex[length=2.6mm]},
+  nodebox/.style={draw=black!80,rounded corners=3pt,minimum width=3.3cm,minimum height=1.25cm,align=center,font=\small,fill=white},
+  shaded/.style={nodebox,fill=black!8},
+  darkbox/.style={nodebox,fill=black!85,text=white},
+  flow/.style={->,very thick,draw=black!70},
+  note/.style={align=left,font=\small}
+}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[font=\bfseries\Large,anchor=west] at (0,5.3) {Módulo 2 --- Modelado 3D y vistas};
+\begin{scope}[shift={(0.5,1.2)},line join=round,very thick]
+\filldraw[fill=black!6] (0,1.8)--(2,2.7)--(4,1.8)--(2,0.9)--cycle;
+\filldraw[fill=black!3] (0,1.8)--(2,0.9)--(2,-1.1)--(0,-0.2)--cycle;
+\filldraw[fill=black!14] (2,0.9)--(4,1.8)--(4,-0.2)--(2,-1.1)--cycle;
+\end{scope}
+\node[font=\bfseries] at (2.5,4.4) {Perspectiva isométrica};
+\node[shaded,minimum width=3.9cm] at (7.8,3.6) {\textbf{VISTA SUPERIOR}\\largo $\times$ ancho};
+\node[shaded,minimum width=3.9cm] at (12.5,3.6) {\textbf{VISTA FRONTAL}\\ancho $\times$ altura};
+\draw[thick] (6.3,0.9) rectangle (9.3,2.2);
+\draw[thick] (11.0,0.8) rectangle (14.0,2.2);
+\node at (7.8,0.45) {$4,00\times3,50$ m};
+\node at (12.5,0.45) {$3,50\times2,50$ m};
+\node[shaded,minimum width=8cm] at (9.5,-1.2) {Área del piso = largo $\times$ ancho = $14,00$ m$^2$};
+\end{tikzpicture}
+\end{document}
