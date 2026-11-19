@@ -8,6 +8,7 @@
     "test:qa": "playwright test --reporter=list"
   },
   "devDependencies": {
-    "@playwright/test": "^1.56.1"
+    "@playwright/test": "^1.56.1",
+    "@axe-core/playwright": "^4.10.2"
   }
 }
