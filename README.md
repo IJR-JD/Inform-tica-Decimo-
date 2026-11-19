@@ -47,3 +47,28 @@ El portal conserva `styles.css` y `split-layout.css`. Los contenidos se mantiene
 ## Referencia principal
 
 Documento institucional suministrado por el docente: *Planeación Undécimo Finalizada.docx*; curso Tecnología e Informática, grado undécimo, periodo I, proyecto de Microsoft Copilot Agente. Esta referencia no se incluye en el repositorio público para evitar redistribuir documentos institucionales.
+
+
+## Teoría ampliada · Periodo I (módulos 1–4)
+
+Se incorporaron cuatro capítulos extensos con definiciones técnicas, procedimientos explicados, cálculos y ejemplos resueltos sobre:
+
+1. **Problemas tecnológicos:** necesidad, usuario, problema, alcance, restricciones, criterios y comparación de alternativas.
+2. **Modelado CAD:** punto, línea, curva, superficie, sólido, unidades, escala, vistas ortogonales e isométricas, áreas y volumen.
+3. **Documentación técnica:** estructura de archivos, versiones, trazabilidad, registro de cambios y trabajo colaborativo.
+4. **Proyecto y validación:** design brief, prototipo editable, matriz requisito/prueba/evidencia, corrección y presentación.
+
+Los contenidos aparecen al abrir **Theory** de cada uno de los primeros cuatro módulos, bajo la explicación breve original. Cada módulo enlaza su **diagrama vectorial SVG** y el código **LaTeX/TikZ** correspondiente. Las figuras están disponibles también como assets independientes, sin dependencia de bibliotecas web externas.
+
+| Módulo | SVG (visualización web) | Fuente LaTeX |
+|---|---|---|
+| 1 | [Problema → requisito](assets/diagrams/modulo-01.svg) | [TikZ](assets/diagrams/modulo-01.tex) |
+| 2 | [Modelo y vistas](assets/diagrams/modulo-02.svg) | [TikZ](assets/diagrams/modulo-02.tex) |
+| 3 | [Versionado y trazabilidad](assets/diagrams/modulo-03.svg) | [TikZ](assets/diagrams/modulo-03.tex) |
+| 4 | [Verificación del proyecto](assets/diagrams/modulo-04.svg) | [TikZ](assets/diagrams/modulo-04.tex) |
+| Consolidado | [Secuencia del periodo](assets/diagrams/periodo-1-consolidado.svg) | [TikZ](assets/diagrams/periodo-1-consolidado.tex) |
+
+El SVG y la fuente TikZ son **dos representaciones editables correspondientes del mismo esquema conceptual**; no deben tratarse como salidas bit a bit de una compilación automatizada. El material deja explícito cuándo un ejemplo es ilustrativo y no corresponde a aprobación de normas técnicas.
+
+Archivos nuevos: `theory-foundations.js`, `theory-foundations.css` y `assets/diagrams/*.svg|*.tex`. El CSS base institucional permanece sin cambios.
+

@@ -1,0 +1,30 @@
+\documentclass[tikz,border=9mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric}
+\tikzset{
+  >={Latex[length=2.6mm]},
+  nodebox/.style={draw=black!80,rounded corners=3pt,minimum width=3.3cm,minimum height=1.25cm,align=center,font=\small,fill=white},
+  shaded/.style={nodebox,fill=black!8},
+  darkbox/.style={nodebox,fill=black!85,text=white},
+  flow/.style={->,very thick,draw=black!70},
+  note/.style={align=left,font=\small}
+}
+\begin{document}
+\begin{tikzpicture}
+\node[font=\bfseries\Large,anchor=west] at (0,4.7) {Módulo 3 --- Versiones y trazabilidad};
+\node[nodebox] (v1) at (1.8,3.2) {\textbf{v1 - BASE}\\Puerta de 0,70 m};
+\node[shaded] (why) at (5.4,3.2) {\textbf{CAMBIO}\\Requisito detectado};
+\node[darkbox] (v2) at (9,3.2) {\textbf{v2 - REVISADA}\\Puerta de 0,85 m};
+\node[nodebox] (qa) at (12.6,3.2) {\textbf{PRUEBA}\\Comprobar cota};
+\draw[flow](v1)--(why);\draw[flow](why)--(v2);\draw[flow](v2)--(qa);
+\node[font=\bfseries,anchor=west] at (0,1.8) {Registro de cambios};
+\draw (0,1.4) rectangle (14.3,-1.3);
+\draw (0,0.75)--(14.3,0.75);\draw (0,-0.2)--(14.3,-0.2);
+\draw (2,1.4)--(2,-1.3);\draw (7,1.4)--(7,-1.3);\draw (11.2,1.4)--(11.2,-1.3);
+\node at (1,1.07) {Versión};\node at (4.5,1.07) {Cambio};\node at (9.1,1.07) {Motivo};\node at (12.75,1.07) {Evidencia};
+\node at (1,0.25) {v1};\node at (4.5,0.25) {Modelo base};\node at (9.1,0.25) {Boceto};\node at (12.75,0.25) {Vista 01};
+\node at (1,-0.75) {v2};\node at (4.5,-0.75) {Ancho de puerta};\node at (9.1,-0.75) {Accesibilidad};\node at (12.75,-0.75) {Cota 0,85 m};
+\end{tikzpicture}
+\end{document}
