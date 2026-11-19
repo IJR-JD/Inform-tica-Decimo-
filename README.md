@@ -72,3 +72,15 @@ El SVG y la fuente TikZ son **dos representaciones editables correspondientes de
 
 Archivos nuevos: `theory-foundations.js`, `theory-foundations.css` y `assets/diagrams/*.svg|*.tex`. El CSS base institucional permanece sin cambios.
 
+
+## Módulo 0 · Diagnóstico inicial de competencias
+
+Antes de las doce unidades del Learning Hub se presenta una actividad de entrada **voluntaria y formativa** con 24 situaciones, cuatro por competencia y seis ejes: competencia digital, seguridad y ciudadanía, lógica computacional, datos, diseño CAD e IA crítica. Incluye «Aún no lo sé», revisión antes de finalizar, mapa de fortalezas y áreas de apoyo, rutas A/B/C y exportación individual CSV/JSON sin nombres ni envío a un servidor.
+
+**Precaución:** las rutas son orientativas, no diagnósticos psicométricos ni notas. No hay perfiles permanentes ni calificación institucional. El instrumento no se debe usar para admisión, segregación o decisiones de alto impacto. Los resultados no se almacenan automáticamente; descargar un reporte implica custodia responsable del archivo. Cuatro reactivos por dominio son una muestra pequeña, por lo que se debe contrastar con evidencias prácticas.
+
+- Guía pedagógica y plan de aplicación: [docs/modulo-0-guia-docente.md](docs/modulo-0-guia-docente.md).
+- Instrumento interactivo: `diagnostic-module.js`.
+- Diseño responsivo/impresión: `diagnostic-module.css`.
+- Pruebas automáticas: `tests/diagnostic-module.spec.mjs`.
+- Se mantienen intactos los doce temas y su progreso previo.
