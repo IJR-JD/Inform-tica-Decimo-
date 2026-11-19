@@ -47,7 +47,7 @@ test("All correct: six full domain scores, CSV and JSON download",async({page})=
  await answerAll(page,i=>i%4);
  await expect(page.locator(".diag-big-score")).toContainText("100 %");
  await expect(page.locator(".diag-score-card")).toHaveCount(6);
- await expect(page.locator(".diag-score-card")).toHaveText(/4 \/ 4/);
+ for(let i=0;i<6;i++)await expect(page.locator(".diag-score-card").nth(i)).toContainText("4 / 4");
  await expect(page.locator(".diag-report-hero")).toContainText("Ruta C");
  const csvPromise=page.waitForEvent("download");
  await page.getByRole("button",{name:"Descargar informe CSV"}).click();
