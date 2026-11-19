@@ -84,3 +84,9 @@ Antes de las doce unidades del Learning Hub se presenta una actividad de entrada
 - Diseño responsivo/impresión: `diagnostic-module.css`.
 - Pruebas automáticas: `tests/diagnostic-module.spec.mjs`.
 - Se mantienen intactos los doce temas y su progreso previo.
+
+### Ingreso por correo institucional + Supabase
+
+El Módulo 0 requiere verificar un correo **@ijr.edu.co** a través de Supabase Auth (enlace de acceso por correo; código OTP si la plantilla de correo también entrega un código). Un correo simplemente escrito no habilita el examen. El resultado final se guarda como **resumen formativo** en la tabla `public.ti10_diagnostic_profiles_v1`, con RLS ligada a `auth.uid()` y al correo de la sesión. No guarda respuestas individuales ni corresponde a una calificación oficial. La dirección y clave pública de Supabase en el navegador son datos publicables; no se distribuyen claves de servicio.
+
+**Configuración necesaria:** en Supabase Auth → URL Configuration permitir `https://ijr-jd.github.io/Inform-tica-Decimo-?module0=auth` y comprobar que el proveedor Email y el servicio SMTP funcionan con el dominio institucional. Hasta confirmar esta configuración con una cuenta de prueba, la entrega real del enlace no está certificada. En caso de no poder verificar el correo, el módulo impide responder o guardar un resultado.
