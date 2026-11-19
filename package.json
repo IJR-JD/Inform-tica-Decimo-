@@ -1,0 +1,14 @@
+{
+  "name": "ijr-informatica-decimo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:qa": "playwright test --reporter=list"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@axe-core/playwright": "^4.10.2"
+  }
+}
