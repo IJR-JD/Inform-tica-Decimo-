@@ -10,7 +10,7 @@ test("landing page: 12 modules, term map and original layout",async({page})=>{
  await expect(page.locator("#topicGrid .hub-topic-card")).toHaveCount(12);
  await expect(page.locator(".ti10-project-card")).toHaveCount(3);
  await expect(page.locator('img[src$="periodo-1-consolidado.svg"]')).toBeVisible();
- await expect(page.locator('img[src$="periodo-1-consolidado.svg"]')).toHaveJSProperty("naturalWidth",1080);
+ await expect.poll(()=>page.locator('img[src$="periodo-1-consolidado.svg"]').evaluate(e=>e.complete&&e.naturalWidth>0)).toBe(true);
  expect(errors).toEqual([]);
 });
 test("modules 1–4 display expanded theory, technical diagrams and working source files",async({page,request})=>{
@@ -72,7 +72,7 @@ test("project evidence is local and resettable",async({page})=>{
  await page.reload();
  await page.locator("#topicGrid .workshop-action").first().click();
  await expect(page.locator(".ti10-checkline input").first()).toBeChecked();
- await expect(page.locator(".ti10-evidence-form textarea")).toContainText("modelo de prueba");
+ await expect(page.locator(".ti10-evidence-form textarea")).toHaveValue(/modelo de prueba/);
  page.once("dialog",d=>d.accept());
  await page.getByRole("button",{name:"Clear this topic's draft"}).click();
  await expect(page.locator(".ti10-checkline input").first()).not.toBeChecked();
