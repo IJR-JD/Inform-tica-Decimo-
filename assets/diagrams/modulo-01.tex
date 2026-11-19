@@ -1,0 +1,28 @@
+\documentclass[tikz,border=9mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric}
+\tikzset{
+  >={Latex[length=2.6mm]},
+  nodebox/.style={draw=black!80,rounded corners=3pt,minimum width=3.3cm,minimum height=1.25cm,align=center,font=\small,fill=white},
+  shaded/.style={nodebox,fill=black!8},
+  darkbox/.style={nodebox,fill=black!85,text=white},
+  flow/.style={->,very thick,draw=black!70},
+  note/.style={align=left,font=\small}
+}
+\begin{document}
+\begin{tikzpicture}[node distance=7mm]
+\node[font=\bfseries\Large,anchor=west] at (0,4.4) {Módulo 1 --- Del problema a los requisitos};
+\node[nodebox] (a) at (1.8,2.8) {\textbf{OBSERVAR}\\Situación real};
+\node[shaded] (b) at (5.5,2.8) {\textbf{DEFINIR}\\Usuario y necesidad};
+\node[nodebox] (c) at (9.2,2.8) {\textbf{PROPONER}\\Dos alternativas};
+\node[darkbox] (d) at (12.9,2.8) {\textbf{VALIDAR}\\Criterios medibles};
+\draw[flow] (a)--(b); \draw[flow](b)--(c); \draw[flow](c)--(d);
+\node[font=\bfseries,anchor=west] at (0,1.5) {Ejemplo: acceso a una habitación};
+\node[nodebox] at (1.8,0.2) {\textbf{Necesidad}\\Permitir el paso};
+\node[nodebox] at (7,0.2) {\textbf{Restricción}\\0,95 m disponibles};
+\node[nodebox] at (12.4,0.2) {\textbf{Criterio}\\Acceso sin obstáculos};
+\node[note,anchor=west] at (0,-1.2) {Si falla una prueba, se revisa la alternativa y se vuelve a verificar.};
+\end{tikzpicture}
+\end{document}
