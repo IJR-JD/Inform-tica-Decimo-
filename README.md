@@ -1,69 +1,49 @@
-# Informática 10.º · Instituto Jorge Robledo
+# Informática 10.º · Bases para Tecnología e Informática 11.º
 
-**Digital Products & Applied AI — versión preliminar de contenido 2026/2027**
+**Propuesta preliminar de articulación vertical | Instituto Jorge Robledo**
 
 Portal: https://ijr-jd.github.io/Inform-tica-Decimo-/
 
-## Propósito
+## Continuidad curricular con 11.º (fuente institucional)
 
-Pasar del uso aislado de aplicaciones a la **construcción, documentación y evaluación de soluciones tecnológicas verificables**. Mantener el lenguaje visual del Learning Hub basado en Statistics 11, con progresión Theory → Applied Workshop → Evidence → Teacher Review.
+La *Planeación Undécimo Finalizada* define durante el periodo I un proyecto de **agente especializado en Microsoft Copilot**: reflexión sobre IA, propuesta de necesidad y usuarios, instrucciones, fuentes de conocimiento, conversaciones y pruebas, mejoras, documentación y presentación (semanas 1–13). El curso de 10.º **no implementa ese agente**. Desarrolla los prerrequisitos para que undécimo los aplique.
 
-Esta propuesta es preliminar para revisión por el área académica, no una sustitución automática del plan curricular oficialmente aprobado.
+| 10.º | Preparación para 11.º |
+|---|---|
+| Problema y design brief | Definir propósito y público del agente |
+| Modelos CAD, criterios y documentación | Pensamiento de diseño, evidencia y revisión |
+| HTML/JS y lógica if/else | Comprender flujos e interacciones |
+| CSV/JSON y buscador de FAQs con fuentes | Crear documento y base de conocimiento |
+| Instrucciones y límites simulados | Configurar el agente Copilot |
+| Diez casos de prueba y gestión de errores | Validar, optimizar y presentar el agente |
 
-## Tres proyectos por periodo (10 semanas orientativas por periodo)
+El documento de undécimo incluye la nota **«PENDIENTE DE PROFUNDIZACIÓN»** en semana 6 y una anotación sobre dificultades con imágenes de entrenamiento. No se debe interpretar el texto como aprobación de una malla de décimo ni asumir que el entrenamiento de imágenes continúa como proyecto principal de undécimo.
 
-| Periodo | Proyecto | Resultado esperado | Temas |
-| --- | --- | --- | --- |
-| I | Sustainable Smart Home | Modelo CAD original, plano y matriz de validación | Requisitos, escala, componentes, documentación |
-| II | Build Your Own Digital Tool | App web útil con entradas, reglas, persistencia local y pruebas | HTML/CSS/JS, funciones, validación, QA |
-| III | Reliable AI Assistant | Prototipo acotado, fuentes y 10 casos de evaluación | Datos, reglas, backend seguro, evaluación de IA |
+## Secuencia por periodo
 
-Las semanas se proponen como referencia, no como fechas institucionales verificadas.
+1. **Human-Centered Design & CAD:** requisitos, dimensionamiento, versiones y validación; entrega de modelo y design brief.
+2. **Knowledge Organizer Web App:** HTML, CSS, JavaScript, funciones, condiciones, estructuras CSV/JSON y buscador local con fuentes; entrega de aplicación y pruebas.
+3. **Agent Readiness Portfolio:** fuentes autorizadas, especificación de comportamiento, diálogos simulados, diez casos de evaluación, límites y privacidad; entrega de portafolio transferible a undécimo.
 
-## Secuencia de cada unidad
+El ritmo exacto depende de intensidad horaria y calendario aprobado. Las etapas de esta propuesta no fijan fechas institucionales.
 
-1. Explicar objetivo, vocabulario y concepto.
-2. Mostrar un ejemplo y un desafío aplicable.
-3. Ejecutar el procedimiento paso a paso.
-4. Desarrollar una evidencia tangible.
-5. Registrar el procedimiento y las pruebas.
-6. Completar la autoevaluación y presentar evidencia para revisión docente.
+## Evidencias y evaluación
 
-**Importante:** el quiz actual es diagnóstico/formativo y NO demuestra por sí solo dominio práctico. El registro de evidencias se guarda únicamente en el navegador (localStorage), no constituye entrega al profesor ni calificación institucional.
+En las doce unidades hay: objetivo, vocabulario, cuatro pasos, desafío, evidencia, checklist y errores comunes. Los cuestionarios binarios son formativos; la evaluación de producto exige revisión del docente. Rúbrica sugerida: problema 15 %, diseño 20 %, implementación 30 %, pruebas 20 %, documentación 15 %.
 
-## Rúbrica sugerida
+## Tecnología y seguridad
 
-- Formulación del problema y criterios: 15 %.
-- Diseño y razonamiento: 20 %.
-- Implementación funcional: 30 %.
-- Pruebas y correcciones: 20 %.
-- Documentación y comunicación: 15 %.
+El portal conserva `styles.css` y `split-layout.css`. Los contenidos se mantienen en `learning-content.js`, y su extensión de estilo en `learning-content.css`. El registro del estudiante se guarda solo en su navegador, no se entrega ni califica automáticamente. El laboratorio de preparación documental simula consultas exactas sobre datos ficticios: no utiliza modelos reales, no consulta Copilot y no solicita información personal ni tokens API.
 
-## Estructura del código
+## Criterios de aceptación
 
-- `index.html`: estructura original Theory/Assessment/Project Lab y 12 temas.
-- `styles.css` y `split-layout.css`: **sin cambios** para preservar el formato original.
-- `learning-content.js`: contenido de doce unidades, proyectos, checklist, rúbrica y notas locales.
-- `learning-content.css`: extensión responsiva del sistema visual.
+- Tres proyectos distintos en décimo, sin duplicar el proyecto agente de undécimo.
+- Doce unidades conectadas con competencias progresivas.
+- Interfaz Theory / Assessment y laboratorios anteriores preservados.
+- Ensayo local de consultas con fuentes y abstención si no hay respuesta.
+- Controles de privacidad, mensaje explícito de que las notas son locales y guía para trabajo docente.
+- Pruebas del código y verificación visual E2E antes de certificar despliegue.
 
-No se requiere backend, instalación, cuenta ni clave de API. El laboratorio de IA del periodo III utiliza reglas deterministas simuladas y lo comunica como tal. La conexión a un modelo real es una futura implementación que requeriría infraestructura, evaluación de privacidad y autorización institucional.
+## Referencia principal
 
-## Criterios de aceptación para futuras iteraciones
-
-- Cada una de las 12 unidades tiene objetivo, guía paso a paso, desafío, evidencia y control de calidad.
-- Los tres proyectos aparecen con un acceso desde la portada y cada uno lleva al primer tema del periodo.
-- El menú de laboratorio y los controles existentes siguen funcionando.
-- Las notas de estudiante son opcionales, permanecen locales y pueden eliminarse por tema.
-- No se solicita ni almacena información personal de menores.
-- No se introducen claves de IA en frontend.
-- Diseño usable en pantallas pequeñas y teclado.
-- Pruebas E2E con navegador antes de declarar producción completamente validada.
-
-## Referentes para fundamentación curricular
-
-- World Economic Forum (2025), *Future of Jobs Report*: https://www.weforum.org/publications/the-future-of-jobs-report-2025/
-- UNESCO (2024), *AI competency framework for students*: https://unesdoc.unesco.org/ark:/48223/pf0000391105
-- CSTA, estándares de informática: https://csteachers.org/k12standards/
-- MinTIC/Fedesoft, tendencias de talento TI Colombia 2025–2030: https://www.mintic.gov.co/
-
-Los referentes fundamentan la orientación general; la distribución por periodos, actividades y rúbrica son decisiones pedagógicas propuestas, no exigencias textuales de esas fuentes.
+Documento institucional suministrado por el docente: *Planeación Undécimo Finalizada.docx*; curso Tecnología e Informática, grado undécimo, periodo I, proyecto de Microsoft Copilot Agente. Esta referencia no se incluye en el repositorio público para evitar redistribuir documentos institucionales.
