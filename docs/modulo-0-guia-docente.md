@@ -34,7 +34,7 @@ Son **24 situaciones de selección única**, cuatro por área, con cuatro altern
 ## Aplicación y retroalimentación
 
 1. Abrir el Learning Hub y seleccionar **Módulo 0 → Realizar diagnóstico inicial**.
-2. Leer la información de privacidad y, si se utiliza, ingresar exclusivamente el código no nominal asignado por el docente (ej. `G10-A07`).
+2. Leer la información de privacidad y, si se utiliza, ingresar exclusivamente el correo institucional individual del estudiante (`@ijr.edu.co`) y completar la verificación enviada por Supabase.
 3. Completar las 24 preguntas. Puede usarse «Aún no lo sé» sin sanción adicional.
 4. Revisar respuestas pendientes y editar cualquier selección antes de finalizar.
 5. Consultar el resultado global, el mapa de seis dominios y las recomendaciones.
@@ -74,3 +74,11 @@ Después de la actividad, comparar el desempeño observable con las bandas del d
 - La validación manual con docente y estudiantes sigue siendo necesaria antes de usar el diagnóstico como insumo curricular institucional formal.
 
 **Nota institucional:** La estructura del Módulo 0 y la matriz de competencias constituyen una **propuesta de diseño pedagógico** basada en los módulos existentes del Learning Hub de décimo y su articulación prevista con undécimo, no una afirmación de que este instrumento haya sido previamente aprobado por el colegio.
+
+## Actualización de identificación institucional (Supabase)
+
+El acceso ya no utiliza código de estudiante. Requiere **correo `@ijr.edu.co` confirmado mediante Supabase Auth**. El formulario ofrece enlace por correo; la verificación de código solo funciona si la plantilla configurada envía un token numérico. La cuenta autenticada vincula el resumen con `auth_user_id` y `institutional_email`. Las políticas RLS permiten al estudiante consultar y actualizar únicamente su propio registro; no hay políticas de acceso anónimo. La tabla está separada de las evaluaciones previas.
+
+La aplicación guarda en Supabase **únicamente seis puntuaciones por competencia y datos globales**, no las 24 respuestas. El correo es dato personal: los docentes deben garantizar información y medidas de tratamiento adecuadas para menores, condiciones institucionales de acceso y un procedimiento de eliminación/retención autorizado. El cliente guarda temporalmente el token de acceso en `sessionStorage`; no almacena respuestas del examen en el navegador. La interfaz avisa de errores de guardado y ofrece reintento.
+
+**Antes de aplicar en una clase:** autorizar el origen `https://ijr-jd.github.io/Inform-tica-Decimo-?module0=auth` en Supabase Auth → URL Configuration, verificar SMTP y probar un enlace real en un correo institucional de prueba. El examen no permite empezar sin correo verificado. No confundir pruebas automatizadas con pruebas reales del correo. La seguridad de filas por RLS no garantiza integridad certificada de la nota, porque la corrección se realiza en el navegador; usar solamente para orientación formativa.
