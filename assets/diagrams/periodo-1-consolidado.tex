@@ -1,0 +1,18 @@
+\documentclass[tikz,border=10mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usetikzlibrary{positioning,arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Latex]
+\node[font=\bfseries\Large,anchor=west] at (0,4.2) {Periodo I --- Fundamentos técnicos};
+\tikzset{stage/.style={draw,rounded corners,minimum width=3.6cm,minimum height=3.2cm,align=center,font=\small}}
+\node[stage] (a) at (2,1.5) {\textbf{01}\\[3mm]\textbf{IDENTIFICAR}\\Usuario y requisitos\\[3mm]Ficha del problema};
+\node[stage] (b) at (6.4,1.5) {\textbf{02}\\[3mm]\textbf{REPRESENTAR}\\Vistas y cotas\\[3mm]Modelo CAD};
+\node[stage] (c) at (10.8,1.5) {\textbf{03}\\[3mm]\textbf{DOCUMENTAR}\\Versiones y cambios\\[3mm]Ficha técnica};
+\node[stage,fill=black!85,text=white] (d) at (15.2,1.5) {\textbf{04}\\[3mm]\textbf{VALIDAR}\\Pruebas y evidencias\\[3mm]Entrega final};
+\draw[->,very thick] (a)--(b);\draw[->,very thick] (b)--(c);\draw[->,very thick] (c)--(d);
+\node[anchor=west] at (0,-1.1) {Resultado: problema + modelo + historial + matriz de validación.};
+\node[anchor=west] at (0,-1.8) {Transferencia a 11.º: fuentes, instrucciones y pruebas de un agente.};
+\end{tikzpicture}
+\end{document}
